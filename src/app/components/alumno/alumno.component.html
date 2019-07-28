@@ -1,45 +1,51 @@
-<div class="alert alert-primary" role="alert"> Alumno
-    <form (ngSubmit)="guardar()">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Nombre alumno</label>
-          <input type="text" class="form-control"  placeholder="Introduzca nombre">
-          
-        </div>
-        
-        <div class="form-group">
-          <label for="exampleInputEmail1">Apellido Paterno</label>
-          <input type="text" class="form-control"  placeholder="Introduzca Apellido Paterno">
-          
-        </div>
-      
-        <div class="form-group">
-          <label for="exampleInputEmail1">Apellido Materno</label>
-          <input type="text" class="form-control"  placeholder="Introduzca Apellido Materno">
-        </div>
-      
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email</label>
-          <input type="email" class="form-control"  placeholder="Introduzca email">
-          <small id="emailHelp" class="form-text text-muted">Nosotros nunca compartiremos tu corrreo con alguien mas</small>
-        </div>
-      
-        <div class="form-group">
-          <label for="exampleInputEmail1">Direccion</label>
-          <input type="text" class="form-control"  placeholder="Introduzca Direccion">
-        </div>
-      
-        <div class="form-group">
-          <label for="exampleInputEmail1">Genero</label>
-          <input type="text" class="form-control"  placeholder="Introduzca nombre">
-        </div>
-        <div class="form-group">
-          <label>Asignatura</label>
-          <input type="text" class="form-control"  [(ngModel)]="id" placeholder="Introduzca id Asignatura" name="id">
-        </div>
 
-      <button type="submit" class="btn btn-success" style="width: 100px; margin: 10px;">Guardar</button>
-      <button type="submit" class="btn btn-primary" style="width: 100px; margin: 10px;">Editar</button>
-      <button type="submit" class="btn btn-danger" style="width: 100px; margin: 10px;">Eliminar</button>
+<div class="alert alert-primary" role="alert"> Alumno
+  <form (ngSubmit)="update()">
+      <div class="form-group">
+        <label>Nombre alumno</label>
+        <input type="text" class="form-control"  [(ngModel)]="name" placeholder="Introduzca name" name="name">
+        
+      </div>
       
-      </form>
+      <div class="form-group">
+        <label>Apellido Paterno</label>
+        <input type="text" class="form-control"  [(ngModel)]="ap_pat" placeholder="Introduzca Apellido Paterno" name="ap_pat">
+        
+      </div>
+    
+      <div class="form-group">
+        <label>Apellido Materno</label>
+        <input type="text" class="form-control"  [(ngModel)]="ap_mat" placeholder="Introduzca Apellido Materno" name="ap_mat">
+      </div>
+      <div class="form-group">
+        <label>Edad</label>
+        <input type="text" class="form-control"  [(ngModel)]="edad" placeholder="Introduzca edad" name="edad">
+      </div>
+    
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control"  [(ngModel)]="email" placeholder="Introduzca email" name="email">
+        <small id="emailHelp" class="form-text text-muted">Nosotros nunca compartiremos tu corrreo con alguien mas</small>
+      </div>
+    
+      <div class="form-group">
+        <label>Direccion</label>
+        <input type="text" class="form-control"  [(ngModel)]="address" placeholder="Introduzca Direccion" name="email">
+      </div>
+    
+      <div class="form-group">
+        <label>Genero</label>
+        <input type="text" class="form-control"  [(ngModel)]="genero" placeholder="Introduzca genero" name="genero">
+      </div>
+
+      <div class="form-group">
+        <label>Profesor Asignado</label>
+        <input type="text" class="form-control"  [(ngModel)]="teacherId" placeholder="Introduzca id Profesor asignado" name="teacherId">
+      </div>
+
+    <button type="submit" class="btn btn-success" style="width: 100px; margin: 10px;">Guardar</button>
+    <button type="submit" class="btn btn-primary" style="width: 100px; margin: 10px;">Editar</button>
+    <button type="submit" class="btn btn-danger" style="width: 100px; margin: 10px;">Eliminar</button>
+    
+  </form>
 </div>

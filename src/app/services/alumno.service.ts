@@ -31,6 +31,7 @@ export class AlumnoService {
   getMethod():Observable<any> {
     return this.http.get(`${this.api}alumno/alumno1/`,httpOptions2);
   }
+  
   postMethod(params: string):Observable<any> {
     // console.log(params);
     // console.log('get token: '+localStorage.getItem('token'));

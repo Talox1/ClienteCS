@@ -18,14 +18,14 @@ export class AlumnoService {
   api:string  = API;
 
   constructor(public wsService: WebsocketService, private http:HttpClient) { }
-
-  login(params: string):Observable<any> {
+  
+  login(params: string):Observable<any>{
     const httpOptions = {
       headers : new HttpHeaders({
         'Content-Type': 'application/json',
       })
     }
-    return this.http.post(`${this.api}login/`,params, httpOptions);
+    return this.http.post(`${this.api}login/`, params, httpOptions);
   }
   
   getMethod():Observable<any> {

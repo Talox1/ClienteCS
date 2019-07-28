@@ -73,7 +73,7 @@ export class ProfesorComponent implements OnInit {
       response =>{
         console.log(response);
       }
-    );
+    )
   }
 
   update(){

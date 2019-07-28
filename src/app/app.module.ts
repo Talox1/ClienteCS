@@ -6,7 +6,7 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 const config: SocketIoConfig = {
   url: environment.wsUrl, options: {}
 };
-
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AlumnoComponent } from './components/alumno/alumno.component';
 import { ProfesorComponent } from './components/profesor/profesor.component';
 import { MateriaComponent } from './components/materia/materia.component';
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { MateriaComponent } from './components/materia/materia.component';
     MensajesComponent,
     AlumnoComponent,
     ProfesorComponent,
-    MateriaComponent
+    MateriaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +41,7 @@ import { MateriaComponent } from './components/materia/materia.component';
     ReactiveFormsModule,
     SocketIoModule.forRoot(config),
     HttpClientModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

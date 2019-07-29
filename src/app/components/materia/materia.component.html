@@ -1,5 +1,5 @@
 <div class="alert alert-primary" role="alert"> Asignatura
-    <form (ngSubmit)="guardar()">
+    <form (ngSubmit)="update()">
         <div class="form-group">
           <label for="exampleInputEmail1">Nombre de la materia</label>
           <input type="email" class="form-control" placeholder="Introduzca nombre de la materia"  [(ngModel)]="name" name="name">
@@ -11,6 +11,8 @@
           <input type="email" class="form-control" placeholder="Introduzca Horario" [(ngModel)]="horario" name="horario">
           
         </div>
-        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="submit" class="btn btn-primary" style="width: 100px; margin: 10px;">Guardar</button>
+        <button type="submit" class="btn btn-primary" style="width: 100px; margin: 10px;">Editar</button>
+        <button type="submit" class="btn btn-danger" style="width: 100px; margin: 10px;">Eliminar</button>
       </form>
 </div>

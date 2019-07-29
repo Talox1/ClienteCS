@@ -37,12 +37,12 @@ export class AsignaturaService {
     return this.http.get(`${this.api}asignatura/asignatura1/`,httpOptions2);
   }
 
-  updateMethod(params: string, id:BigInteger):Observable<any>{
-    return this.http.put(`${this.api}asignatura/asignatura1/${id}`,params, httpOptions2);
+  updateMethod(params: string, id:number):Observable<any>{
+    return this.http.put(`${this.api}asignatura/asignatura1detail/${id}`,params, httpOptions2);
   }
 
-  deletedMethod(id:BigInteger):Observable<any>{
-    return this.http.delete(`${this.api}asignatura/asignatura1/${id}`,httpOptions2);
+  deletedMethod(id:number):Observable<any>{
+    return this.http.delete(`${this.api}asignatura/asignatura1detail/${id}`,httpOptions2);
   }
 
 }

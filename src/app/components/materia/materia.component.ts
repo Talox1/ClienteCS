@@ -11,7 +11,7 @@ export class MateriaComponent implements OnInit {
   name:string;
   horario:string
 
-  id:BigInteger;
+  idMateria=1;
 
   formPost: FormGroup;
   formLogin: FormGroup;
@@ -53,10 +53,31 @@ export class MateriaComponent implements OnInit {
 
     this.asignaturaService.postMethod(this.formPost.value).subscribe(
       response =>{
-        console.log('posteando'+response);
+        console.log(response);
       }
     )
   }
-  
 
+  update(){
+    this.formPost = this.formBuilder.group({
+      'name':[`${this.name}`],
+      'horario':[`${this.horario}`]
+    })
+    console.log(this.formPost.value+'\nid'+this.idMateria);
+
+
+    this.asignaturaService.updateMethod(this.formPost.value, this.idMateria).subscribe(
+      response =>{
+        console.log(response);
+      }
+    );
+  }
+  
+  eliminar(){
+    this.asignaturaService.deletedMethod(this.idMateria).subscribe(
+      response => {
+        console.log(response);
+      }
+    )
+  }
 }
